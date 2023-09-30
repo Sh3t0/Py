@@ -59,16 +59,35 @@ def install_amigo_services(folder_path):
         if os.path.isdir(full_path):
             # Sprawdź, czy podkatalog zawiera plik AMIGO.SERVICES.EXE
             amigo_services_exe = os.path.join(full_path, "AMIGO.SERVICES.EXE")
+            amigo_svc_statistics_exe = os.path.join(full_path, "AMIGO.SVC.STATISTICS.EXE") #AMIGO.SVC.STATISTICS.exe
+            #Sprawdź czy katalog zawiera AMIGO.SVC.STATISTICS.EXE dla uslugi STATISTICS
+            if os.path.isfile(amigo_svc_statistics_exe):
+                if os.path.isfile(os.path.join(full_path, "AMIGO.SVC.STATISTICS.EXE")) and (item.lower().startswith("amigo") or item.startswith("AMIGO")):
+                    service_name = '.'.join(parts[:5])
+                    print(f"Instalowanie usługi: {service_name}")
+                    cmd = [amigo_svc_statistics_exe, "-i"]
+                    try:
+                        subprocess.run(cmd, cwd=full_path, check=True)
+                        print(f"Usługa {service_name} została pomyślnie zainstalowana.")
+                    except subprocess.CalledProcessError as e:
+                        print(f"Błąd podczas instalowania usługi {service_name}: {e}")
+            else:
+                print(f"Podkatalog {item} nie zawiera pliku AMIGO.SVC.STATISTICS.EXE. Pomijanie...")
 
+            #Sprawdź wszystkie katalogi pod kątem AMIGO.SERVICES.EXE
             if os.path.isfile(amigo_services_exe):
                 # Sprawdź, czy nazwa katalogu pasuje do wzorca AMIGO.***.# i pobierz nazwę usługi
                 parts = item.split('.')
                 if os.path.isfile(os.path.join(full_path, "AMIGO.SERVICES.EXE")) and (item.lower().startswith("amigo") or item.startswith("AMIGO")):
+                    if os.path.isfile(os.path.join(full_path, "amigo.exe")) and (item.lower().startswith("amigo") or item.startswith("AMIGO"))   :
+                        break
+
                     service_name = '.'.join(parts[:5])
                     print(f"Instalowanie usługi: {service_name}")
 
                     # Uruchom komendę AMIGO.SERVICES.EXE -i
                     cmd = [amigo_services_exe, "-i", service_name]
+
                     try:
                         subprocess.run(cmd, cwd=full_path, check=True)
                         print(f"Usługa {service_name} została pomyślnie zainstalowana.")
@@ -107,7 +126,7 @@ layout = [
         sg.Output(size=(56, 10))
     ],
     [
-         sg.Text('', size=(42, 1)),
+         sg.Text('', size=(46, 1)),
          sg.Button("Exit")
     ],
 ]
