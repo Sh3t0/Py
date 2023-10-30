@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tako.CRC</name>
+    </assembly>
+    <members>
+        <member name="T:Tako.CRC.CRCProviderBase">
+            <summary>
+            Class AbsCRCProvider.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCProviderBase._symbol">
+            <summary>
+            The _symbol
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRCProviderBase.GetCRC(System.String)">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalData">The original data.</param>
+            <returns>CRCStatus.</returns>
+            <exception cref="T:System.ArgumentNullException">OriginalData</exception>
+        </member>
+        <member name="M:Tako.CRC.CRCProviderBase.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+            <exception cref="T:System.ArgumentNullException">OriginalArray</exception>
+        </member>
+        <member name="M:Tako.CRC.CRCProviderBase.GetCRCStatus(Tako.CRC.CRCStatus@,System.UInt32,System.Byte[],System.Byte[])">
+            <summary>
+            Gets the CRC status.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="CRC">The CRC.</param>
+            <param name="CrcArray">The CRC array.</param>
+            <param name="OriginalArray">The original array.</param>
+        </member>
+        <member name="M:Tako.CRC.CRCProviderBase.HexStringToBytes(System.String)">
+            <summary>
+            Hexadecimals the string to bytes.
+            </summary>
+            <param name="Hex">The hexadecimal.</param>
+            <returns>System.Byte[].</returns>
+            <exception cref="T:System.ArgumentNullException">Hex</exception>
+        </member>
+        <member name="M:Tako.CRC.CRCProviderBase.BytesToHexString(System.Byte[])">
+            <summary>
+            Byteses to hexadecimal string.
+            </summary>
+            <param name="HexArray">The hexadecimal array.</param>
+            <returns>System.String.</returns>
+            <exception cref="T:System.ArgumentNullException">HexArray</exception>
+        </member>
+        <member name="P:Tako.CRC.CRCProviderBase.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCProviderBase.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCProviderBase.DataFormat">
+            <summary>
+            Gets or sets the data format.
+            </summary>
+            <value>The data format.</value>
+        </member>
+        <member name="T:Tako.CRC.CRCManager">
+            <summary>
+            Class CRCManager.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCManager._dataFormat">
+            <summary>
+            The _data format
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRCManager.CreateCRCProvider(Tako.CRC.EnumCRCProvider)">
+            <summary>
+            Creates the CRC provider.
+            </summary>
+            <param name="Provider">The provider.</param>
+            <returns>AbsCRCProvider.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRCManager.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+            <value>The provider.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCManager.DataFormat">
+            <summary>
+            Gets or sets the data format.
+            </summary>
+            <value>The data format.</value>
+        </member>
+        <member name="T:Tako.CRC.CRC16Provider">
+            <summary>
+            Class CRC16.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16Provider._polynomial">
+            <summary>
+            The _polynomial
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16Provider._crcTable">
+            <summary>
+            The _CRC table
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRC16Provider.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tako.CRC.CRC16Provider"/> class.
+            </summary>
+            <param name="Polynomial">The polynomial.</param>
+        </member>
+        <member name="M:Tako.CRC.CRC16Provider.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRC16Provider.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRC16Provider.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="T:Tako.CRC.CRC16CCITTProvider">
+            <summary>
+            Class CRC16CCITT.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16CCITTProvider.initail">
+            <summary>
+            The initail
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16CCITTProvider._crcTable">
+            <summary>
+            The _CRC table
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16CCITTProvider._polynomial">
+            <summary>
+            The _polynomial
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRC16CCITTProvider.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tako.CRC.CRC16CCITTProvider"/> class.
+            </summary>
+            <param name="Polynomial">The polynomial.</param>
+        </member>
+        <member name="M:Tako.CRC.CRC16CCITTProvider.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRC16CCITTProvider.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRC16CCITTProvider.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="T:Tako.CRC.CRC16KermitProvider">
+            <summary>
+            Class CRC16Kermit.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16KermitProvider._crcTable">
+            <summary>
+            The _CRC table
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16KermitProvider._polynomial">
+            <summary>
+            The _polynomial
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRC16KermitProvider.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tako.CRC.CRC16KermitProvider"/> class.
+            </summary>
+            <param name="Polynomial">The polynomial.</param>
+        </member>
+        <member name="M:Tako.CRC.CRC16KermitProvider.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRC16KermitProvider.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRC16KermitProvider.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="T:Tako.CRC.CRC16ModbusProvider">
+            <summary>
+            Class CRC16Modbus.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC16ModbusProvider._crcTable">
+            <summary>
+            The _CRC table
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRC16ModbusProvider.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRC16ModbusProvider.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRC16ModbusProvider.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="T:Tako.CRC.CRC32Provider">
+            <summary>
+            Class CRC32.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC32Provider._crcTable">
+            <summary>
+            The _CRC table
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC32Provider._polynomial">
+            <summary>
+            The _polynomial
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRC32Provider.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tako.CRC.CRC32Provider"/> class.
+            </summary>
+            <param name="Polynomial">The polynomial.</param>
+        </member>
+        <member name="M:Tako.CRC.CRC32Provider.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRC32Provider.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRC32Provider.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="T:Tako.CRC.CRC8Provider">
+            <summary>
+            Class CRC8.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC8Provider._crcTable">
+            <summary>
+            The _CRC table
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRC8Provider._polynomial">
+            <summary>
+            The _polynomial
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRC8Provider.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tako.CRC.CRC8Provider"/> class.
+            </summary>
+            <param name="Polynomial">The polynomial.</param>
+        </member>
+        <member name="M:Tako.CRC.CRC8Provider.GetCRC(System.Byte[])">
+            <summary>
+            Gets the CRC.
+            </summary>
+            <param name="OriginalArray">The original array.</param>
+            <returns>CRCStatus.</returns>
+        </member>
+        <member name="P:Tako.CRC.CRC8Provider.CRCTable">
+            <summary>
+            Gets the CRC table.
+            </summary>
+            <value>The CRC table.</value>
+        </member>
+        <member name="P:Tako.CRC.CRC8Provider.Polynomial">
+            <summary>
+            Gets or sets the polynomial.
+            </summary>
+            <value>The polynomial.</value>
+        </member>
+        <member name="T:Tako.CRC.CRCStatus">
+            <summary>
+            Class CRCStatus.
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCStatus._fullDataArray">
+            <summary>
+            The _full data array
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCStatus._crcDecimal">
+            <summary>
+            The _CRC decimal
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCStatus._crcHexadecimal">
+            <summary>
+            The _CRC hexadecimal
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCStatus._crcArray">
+            <summary>
+            The _CRC array
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.CRCStatus._fullDataHexadecimal">
+            <summary>
+            The _full data hexadecimal
+            </summary>
+        </member>
+        <member name="M:Tako.CRC.CRCStatus.OnPropertyChanged(System.String)">
+            <summary>
+            Called when [property changed].
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="E:Tako.CRC.CRCStatus.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:Tako.CRC.CRCStatus.CrcHexadecimal">
+            <summary>
+            Gets or sets the CRC hexadecimal.
+            </summary>
+            <value>The CRC hexadecimal.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCStatus.CrcDecimal">
+            <summary>
+            Gets or sets the CRC decimal.
+            </summary>
+            <value>The CRC decimal.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCStatus.CrcArray">
+            <summary>
+            Gets or sets the CRC array.
+            </summary>
+            <value>The CRC array.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCStatus.FullDataArray">
+            <summary>
+            Gets the full data array.
+            </summary>
+            <value>The full data array.</value>
+        </member>
+        <member name="P:Tako.CRC.CRCStatus.FullDataHexadecimal">
+            <summary>
+            Gets or sets the full data hexadecimal.
+            </summary>
+            <value>The full data hexadecimal.</value>
+        </member>
+        <member name="T:Tako.CRC.EnumCRCProvider">
+            <summary>
+            Enum EnumCRCProvider
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC16">
+            <summary>
+            The CRC16
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC16CCITT_0x0000">
+            <summary>
+            The CRC16 ccit T_0X0000
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC16CCITT_0xFFFF">
+            <summary>
+            The CRC16 ccit T_0X FFFF
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC16CCITT_0x1D0F">
+            <summary>
+            The CRC16 ccit T_0X1 d0 f
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC16Kermit">
+            <summary>
+            The CRC16 kermit
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC16Modbus">
+            <summary>
+            The CRC16 modbus
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC32">
+            <summary>
+            The CRC32
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC8">
+            <summary>
+            The CRC8
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC8CCITT">
+            <summary>
+            The CRC8 ccitt
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC8DALLASMAXIM">
+            <summary>
+            The CRC8 dallasmaxim
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC8SAEJ1850">
+            <summary>
+            The CRC8 SAEJ1850
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumCRCProvider.CRC8WCDMA">
+            <summary>
+            The CRC8 wcdma
+            </summary>
+        </member>
+        <member name="T:Tako.CRC.EnumOriginalDataFormat">
+            <summary>
+            Enum EnumOriginalDataFormat
+            </summary>
+        </member>
+        <member name="F:Tako.CRC.EnumOriginalDataFormat.ASCII">
+            <summary>
+            The ASCII
+            </summary>
+        </member>
+    </members>
+</doc>

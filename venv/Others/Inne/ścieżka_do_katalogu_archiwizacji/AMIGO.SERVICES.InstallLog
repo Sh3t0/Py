@@ -1,0 +1,132 @@
+﻿Installing assembly 'c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.exe
+   logfile = c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.PING.1
+Installing service AMIGO.PING.1...
+Service AMIGO.PING.1 has been successfully installed.
+Creating EventLog source AMIGO.PING.1 in log Application...
+Committing assembly 'c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.exe
+   logfile = c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.PING.1
+Installing assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.ARCHIVER
+Installing service AMIGO.SERVICES.ARCHIVER...
+Service AMIGO.SERVICES.ARCHIVER has been successfully installed.
+Creating EventLog source AMIGO.SERVICES.ARCHIVER in log Application...
+Committing assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.ARCHIVER
+Installing assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.ARCHIVER
+Installing service AMIGO.SERVICES.ARCHIVER...
+Creating EventLog source AMIGO.SERVICES.ARCHIVER in log Application...
+Rolling back assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.ARCHIVER
+Restoring event log to previous state for source AMIGO.SERVICES.ARCHIVER.
+Uninstalling assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.ARCHIVER
+Removing EventLog source AMIGO.SERVICES.ARCHIVER.
+Service AMIGO.SERVICES.ARCHIVER is being removed from the system...
+Service AMIGO.SERVICES.ARCHIVER was successfully removed from the system.
+Installing assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.ARCHIVER
+Installing service AMIGO.ARCHIVER...
+Service AMIGO.ARCHIVER has been successfully installed.
+Creating EventLog source AMIGO.ARCHIVER in log Application...
+Committing assembly 'C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.ARCHIVER\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.ARCHIVER
+Installing assembly 'C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SYNC
+Installing service AMIGO.SYNC...
+Creating EventLog source AMIGO.SYNC in log Application...
+Rolling back assembly 'C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SYNC
+Restoring event log to previous state for source AMIGO.SYNC.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SYNC
+Installing service AMIGO.SYNC...
+Service AMIGO.SYNC has been successfully installed.
+Creating EventLog source AMIGO.SYNC in log Application...
+Committing assembly 'C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.exe
+   logfile = C:\amigo\AMIGO.SERVICES.SYNC\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SYNC
+Instalowanie zestawu 'G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE'.
+Uwzględnione parametry to:
+   logtoconsole = 
+   assemblypath = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE
+   logfile = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.COLLECT
+Trwa instalowanie usługi AMIGO.SERVICES.COLLECT...
+Usługa AMIGO.SERVICES.COLLECT została zainstalowana pomyślnie.
+Trwa tworzenie źródła EventLog AMIGO.SERVICES.COLLECT w dzienniku Application...
+Zatwierdzanie zestawu 'G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE'.
+Uwzględnione parametry to:
+   logtoconsole = 
+   assemblypath = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE
+   logfile = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.COLLECT
+Instalowanie zestawu 'G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE'.
+Uwzględnione parametry to:
+   logtoconsole = 
+   assemblypath = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE
+   logfile = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.COLLECT
+Trwa instalowanie usługi AMIGO.SERVICES.COLLECT...
+Usługa AMIGO.SERVICES.COLLECT została zainstalowana pomyślnie.
+Trwa tworzenie źródła EventLog AMIGO.SERVICES.COLLECT w dzienniku Application...
+Zatwierdzanie zestawu 'G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE'.
+Uwzględnione parametry to:
+   logtoconsole = 
+   assemblypath = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE
+   logfile = G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog
+   servicename = AMIGO.SERVICES.COLLECT

@@ -1,0 +1,61 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://amigo.tmobile.pl/channel/service/secure" xmlns:dat="http://soabp.ei.tmobile.net/datatypes" xmlns:dat1="http://messaging.ei.tmobile.net/datatypes" xmlns:ser="http://amigo.tmobile.pl/channel/services">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sec:SendEmailSoaBpRequest>
+         <dat:eiMessageContext>
+            <!--Optional:-->
+            <!--type: EIMessageTarget-->
+            <dat1:target>daniel-zareba@t-mobile.pl</dat1:target>
+            <!--Optional:-->
+            <!--type: EIMessageReplyTo-->
+            <dat1:replyTo>daniel.zareba@t-mobile.pl</dat1:replyTo>
+            <!--Optional:-->
+            <!--type: EIMessageRequestId-->
+            <dat1:requestId>aaa1234</dat1:requestId>
+            <!--Optional:-->
+            <!--type: EIMessageTimeLeft-->
+            <dat1:timeLeft>10000</dat1:timeLeft>
+            <!--Optional:-->
+            <!--type: EIMessagePriority-->
+            <dat1:priority>1</dat1:priority>
+            <!--Optional:-->
+            <!--type: EIMessageRedelivered - enumeration: [CLIENT,SOABP,MANUAL]-->
+            <dat1:redelivered>MANUAL</dat1:redelivered>
+            <!--Optional:-->
+            <!--type: EIMessageRevision-->
+            <dat1:revision>temperat iras</dat1:revision>
+            <!--type: EIMessageSender-->
+            <dat1:sender>komplet@t-mobile.pl</dat1:sender>
+            <!--type: EIMessageCorrelationId-->
+            <dat1:correlationId>regemque dedit</dat1:correlationId>
+            <!--Optional:-->
+            <!--type: EISequenceNumber-->
+            <dat1:sequenceId>201</dat1:sequenceId>
+            <!--Optional:-->
+            <dat1:properties>
+               <!--1 or more repetitions:-->
+               <dat1:property dat1:name="fremunt celsa" dat1:policy="ferant rapidi" dat1:mustUnderstand="false" dat1:type="string">et carcere</dat1:property>
+            </dat1:properties>
+         </dat:eiMessageContext>
+         <sec:data>
+            <ser:recipients>
+               <!--1 or more repetitions:-->
+               <!--type: EmailAddressType-->
+               <ser:recipient>daniel.zareba@t-mobile.pl</ser:recipient>
+            </ser:recipients>
+            <!--type: EmailAddressType-->
+            <ser:sender>komplet@t-mobile.pl</ser:sender>
+            <!--type: string-->
+            <ser:subject>bella gero et</ser:subject>
+            <ser:textContent contentType="text/plain">hoc metuens</ser:textContent>
+            <!--Optional:-->
+            <ser:attachments>
+               <!--1 or more repetitions:-->
+               <ser:attachment contentType="ac vinclis" fileName="speluncis abdidit">AA==</ser:attachment>
+            </ser:attachments>
+            <!--type: MessageIdType-->
+            <ser:messageId>aris imponet honorem</ser:messageId>
+         </sec:data>
+      </sec:SendEmailSoaBpRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

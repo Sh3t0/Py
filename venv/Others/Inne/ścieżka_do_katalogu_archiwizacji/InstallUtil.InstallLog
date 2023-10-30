@@ -1,0 +1,115 @@
+﻿
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.exe assembly's progress.
+The file is located at c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.exe assembly's progress.
+The file is located at c:\amigo\AMIGO.SERVICES.PING.1\AMIGO.SERVICES.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the c:\amigo\AMIGO.SERVICES.COLLECT.1\AMIGO.SERVICES.exe assembly's progress.
+The file is located at c:\amigo\AMIGO.SERVICES.COLLECT.1\AMIGO.SERVICES.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the c:\amigo\AMIGO.SERVICES.COLLECT.1\AMIGO.SERVICES.exe assembly's progress.
+The file is located at c:\amigo\AMIGO.SERVICES.COLLECT.1\AMIGO.SERVICES.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+Uruchamianie instalacji transakcyjnej.
+
+Rozpoczyna się faza instalacji procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza instalacji została ukończona pomyślnie i rozpoczyna się faza rezerwacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza rezerwacji została ukończona pomyślnie.
+
+Instalacja transakcyjna została ukończona.
+
+Uruchamianie instalacji transakcyjnej.
+
+Rozpoczyna się faza instalacji procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Podczas fazy instalacji wystąpił wyjątek.
+System.ComponentModel.Win32Exception: Określona usługa już istnieje
+
+Rozpoczyna się faza wycofywania procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza wycofywania została ukończona pomyślnie.
+
+Instalacja transakcyjna została ukończona.
+
+Uruchamianie instalacji transakcyjnej.
+
+Rozpoczyna się faza instalacji procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog.
+
+Faza instalacji została ukończona pomyślnie i rozpoczyna się faza rezerwacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog.
+
+Faza rezerwacji została ukończona pomyślnie.
+
+Instalacja transakcyjna została ukończona.
+
+Uruchamianie instalacji transakcyjnej.
+
+Rozpoczyna się faza instalacji procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza instalacji została ukończona pomyślnie i rozpoczyna się faza rezerwacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza rezerwacji została ukończona pomyślnie.
+
+Instalacja transakcyjna została ukończona.
+
+Uruchamianie instalacji transakcyjnej.
+
+Rozpoczyna się faza instalacji procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza instalacji została ukończona pomyślnie i rozpoczyna się faza rezerwacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SVC.STATISTICS.InstallLog.
+
+Faza rezerwacji została ukończona pomyślnie.
+
+Instalacja transakcyjna została ukończona.
+
+Uruchamianie instalacji transakcyjnej.
+
+Rozpoczyna się faza instalacji procesu instalacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog.
+
+Faza instalacji została ukończona pomyślnie i rozpoczyna się faza rezerwacji.
+Aby sprawdzić postęp zestawu G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.EXE, zapoznaj się z zawartością pliku dziennika.
+Plik znajduje się w G:\amigo-cappital\AMIGO.SERVICES.COLLECT\AMIGO.SERVICES.InstallLog.
+
+Faza rezerwacji została ukończona pomyślnie.
+
+Instalacja transakcyjna została ukończona.

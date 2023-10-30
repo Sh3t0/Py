@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ServiceConfiguration>
+  <ConnectionString>XpoProvider=MSSqlServer;data source=.\SQLEXPRESS;user id=amigo1;password=amigo1;initial catalog=amigo_andra_demo;Persist Security Info=true</ConnectionString>
+  <Language>pl-PL</Language>
+  <Dispatchers>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.DEVICESYNC</AssemblyName>
+      <TypeName>AMIGO.SERVICES.DEVICESYNC.DeviceSyncDispatcher</TypeName>
+      <ServiceName>SVC.DEVICESYNC</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>996</ServiceIdentifier>
+      <DispatchWaitTime>60000</DispatchWaitTime>
+      <StartErrorWaitTime>60000</StartErrorWaitTime>
+      <StartFalseWaitTime>60000</StartFalseWaitTime>
+      <StartTrueWaitTime>60000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="1"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+        <ParameterCfg key="InfoIntervalSeconds" value="60"/>
+        <ParameterCfg key="WebApiBaseAddress" value="http://wodnik2:8080"/>
+        <ParameterCfg key="KeywordForReplacedDeviceWithOldSimCard" value="Zdjęte"/>
+        <ParameterCfg key="LWM2MPingMode" value="ON"/>
+        <ParameterCfg key="WorkingMode" value="OFF"/>
+        <ParameterCfg key="Mark_Device_As_Ping_Procedure" value="Mark_Device_As_Ping"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.ARCHIVER</AssemblyName>
+      <TypeName>AMIGO.SERVICES.ARCHIVER.ArchiverDispatcher</TypeName>
+      <ServiceName>SVC.ARCHIVER</ServiceName>
+      <PoolSize>3</PoolSize>
+      <ServiceIdentifier>995</ServiceIdentifier>
+      <DispatchWaitTime>10</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>30000</StartFalseWaitTime>
+      <!--powinien byc dluzszy niz czas archiwizacji przez providera-->
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="1"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+        <ParameterCfg key="InfoIntervalSeconds" value="60"/>
+      </Parameters>
+    </DispatcherCfg>
+
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.CREADER</AssemblyName>
+      <TypeName>AMIGO.SERVICES.CREADER.CreaderDispatcher</TypeName>
+      <ServiceName>SVC.CREADER</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>991</ServiceIdentifier>
+      <DispatchWaitTime>5</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>100</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="1"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.PING</AssemblyName>
+      <TypeName>AMIGO.SERVICES.PING.PingDispatcher</TypeName>
+      <ServiceName>SVC.PING</ServiceName>
+      <PoolSize>5</PoolSize>
+      <ServiceIdentifier>1</ServiceIdentifier>
+      <DispatchWaitTime>5</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>100000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="5"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.UPDATE</AssemblyName>
+      <TypeName>AMIGO.SERVICES.UPDATE.WebApiUpdateService.WebApiUpdateDispatcher</TypeName>
+      <ServiceName>SVC.WEBAPIUPDATE</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>10</ServiceIdentifier>
+      <DispatchWaitTime>5</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>30000</StartFalseWaitTime>
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="5"/>
+        <ParameterCfg key="WebApiBaseAddress" value="http://127.0.0.1:8084"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.DATAGO</AssemblyName>
+      <TypeName>AMIGO.SERVICES.DATAGO.WebApiDataGoDispatcher</TypeName>
+      <ServiceName>SVC.DATAGO</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>990</ServiceIdentifier>
+      <DispatchWaitTime>5</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>30000</StartFalseWaitTime>
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="5"/>
+        <ParameterCfg key="WebApiBaseAddress" value="http://127.0.0.1:8085"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.DATAGO_OPERATIONS</AssemblyName>
+      <TypeName>AMIGO.SERVICES.DATAGO_OPERATIONS.DatagoOperationsDispatcher</TypeName>
+      <ServiceName>SVC.DATAGO_OPERATIONS</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>770</ServiceIdentifier>
+      <DispatchWaitTime>5</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>30000</StartFalseWaitTime>
+      <StartTrueWaitTime>10000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="5"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+        <ParameterCfg key="PingsInTestSequence" value="10" />
+        <ParameterCfg key="PingsIntevalMs" value="1000" />
+        <ParameterCfg key="PingSize" value="1000" />
+        <ParameterCfg key="PingTtl" value="10" />
+        <ParameterCfg key="PingTimeoutMs" value="10000" />
+        <ParameterCfg key="PingDoNotFragment" value="True" />
+      </Parameters>
+    </DispatcherCfg>
+
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.UDP</AssemblyName>
+      <TypeName>AMIGO.SERVICES.UDP.RcvDispatcher</TypeName>
+      <ServiceName>SVC.UDP.RCV</ServiceName>
+      <PoolSize>8</PoolSize>
+      <ServiceIdentifier>2</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="Port" value="11000"/>
+        <ParameterCfg key="IP" value="172.25.13.210"/>
+        <ParameterCfg key="AckBytes" value="0"/>
+        <ParameterCfg key="ConvertPortToIP" value="0"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.SNMP</AssemblyName>
+      <TypeName>AMIGO.SERVICES.SNMP.SnmpDispatcher</TypeName>
+      <ServiceName>SVC.SNMP.RCV</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>23</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="Port" value="162"/>
+        <ParameterCfg key="IP" value="Any"/>
+        <!--<ParameterCfg key="AckBytes" value="0"/>-->
+        <!--<ParameterCfg key="ConvertPortToIP" value="0"/>-->
+      </Parameters>
+    </DispatcherCfg>
+
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.BL</AssemblyName>
+      <TypeName>AMIGO.SERVICES.BL.SupDispatcher</TypeName>
+      <ServiceName>SVC.SUP</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>2</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>20000</StartFalseWaitTime>
+      <StartTrueWaitTime>20000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessDeviceRequest" value="true"/>
+        <ParameterCfg key="ProcessDeviceTransfera" value="true"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.UDP</AssemblyName>
+      <TypeName>AMIGO.SERVICES.UDP.TransferaDispatcher</TypeName>
+      <ServiceName>SVC.UDP.TNS</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>2</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>1000</StartTrueWaitTime>
+      <Parameters>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>true</Enabled>
+      <AssemblyName>AMIGO.SERVICES.BL</AssemblyName>
+      <TypeName>AMIGO.SERVICES.BL.RequestDispatcher</TypeName>
+      <ServiceName>SVC.REQ</ServiceName>
+      <PoolSize>8</PoolSize>
+      <ServiceIdentifier>3</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="RequestType" value=""/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+        <ParameterCfg key="GetItemsMethod" value="3"/> <!--1-stara, 2-problematyczne grupowanie, 3-nowa podwojna-->
+        <ParameterCfg key="SummaryDeviceCustomValue7OnSuccessTag" value="podsumowanie_zestawu_do_custom_7"/>
+        <ParameterCfg key="SummaryDeviceCustomValue8OnSuccessTag" value="podsumowanie_zestawu_do_custom_8"/>
+        <ParameterCfg key="SummaryDeviceCustomValue9OnSuccessTag" value="podsumowanie_zestawu_do_custom_9"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.RESET</AssemblyName>
+      <TypeName>AMIGO.SERVICES.RESET.ResetDispatcher</TypeName>
+      <ServiceName>SVC.RESET</ServiceName>
+      <PoolSize>10</PoolSize>
+      <ServiceIdentifier>4</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>2000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="InitString" value="AT"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+        <ParameterCfg key="ReseterType" value="SshComanderInnogy"/>
+        <ParameterCfg key="SshReseterIp" value="172.25.120.148"/>
+        <ParameterCfg key="SshReseterTcpPort" value="22"/>
+        <ParameterCfg key="SshReseterPin" value="0000"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>true</Enabled>
+      <AssemblyName>AMIGO.SERVICES.TELNET</AssemblyName>
+      <TypeName>AMIGO.SERVICES.TELNET.TelnetDispatcher</TypeName>
+      <ServiceName>SVC.TELNET</ServiceName>
+      <!--<PoolSize>50</PoolSize>-->
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>5</ServiceIdentifier>
+      <DispatchWaitTime>10000</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>10000</StartFalseWaitTime>
+      <StartTrueWaitTime>10000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="MaxAttemptCounter" value="50"/>
+        <!--<ParameterCfg key="ProcessCount" value="50"/>-->
+        <ParameterCfg key="ProcessCount" value="1"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+        <ParameterCfg key="WebApiBaseAddress" value="http://wodnik2:8080"/>
+        <ParameterCfg key="OperationSetEndRequestType" value="OPERATION_SET_END.SET"/>
+        <ParameterCfg key="OperationSetEndRequesterType" value="OPERATION_SET_END"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.TELNET</AssemblyName>
+      <TypeName>AMIGO.SERVICES.TELNET.TelnetSessionDispatcher</TypeName>
+      <ServiceName>SVC.TELNET.SESSION</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>9</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>2000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="MaxAttemptCounter" value="5"/>
+        <ParameterCfg key="SessionWaitTime" value="2000"/>
+        <ParameterCfg key="MaxSessionTimeout" value="40000"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.TELNET</AssemblyName>
+      <TypeName>AMIGO.SERVICES.TELNET.PinDispatcher</TypeName>
+      <ServiceName>SVC.PIN</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>6</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>1000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>2000</StartTrueWaitTime>
+
+      <Parameters>
+        <ParameterCfg key="DeviceDataFilesPath" value="Y:\E\monitor\AMIGO\AMIGO\AMIGO.SERVICES\devices"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>true</Enabled>
+      <AssemblyName>AMIGO.SERVICES.UPDATE</AssemblyName>
+      <TypeName>AMIGO.SERVICES.UPDATE.DeviceUpdateDispatcher</TypeName>
+      <ServiceName>SVC.UPDATE</ServiceName>
+      <PoolSize>2</PoolSize>
+      <ServiceIdentifier>7</ServiceIdentifier>
+      <DispatchWaitTime>30000</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>20000</StartFalseWaitTime>
+      <StartTrueWaitTime>20000</StartTrueWaitTime>
+      <Parameters>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.UPDATE</AssemblyName>
+      <TypeName>AMIGO.SERVICES.UPDATE.CheckUpdateDispatcher</TypeName>
+      <ServiceName>SVC.CHECKUPDATE</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>8</ServiceIdentifier>
+      <DispatchWaitTime>30000</DispatchWaitTime>
+      <StartErrorWaitTime>100000</StartErrorWaitTime>
+      <StartFalseWaitTime>20000</StartFalseWaitTime>
+      <StartTrueWaitTime>20000</StartTrueWaitTime>
+      <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      <Parameters>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.TEMPLATE</AssemblyName>
+      <TypeName>AMIGO.SERVICES.TEMPLATE.TemplateDispatcher</TypeName>
+      <ServiceName>SVC.TEMPLATE</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>0</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>2000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>2000</StartTrueWaitTime>
+      <Parameters>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.NOTIFICATIONS</AssemblyName>
+      <TypeName>AMIGO.SERVICES.NOTIFICATIONS.NotificationsDispatcher</TypeName>
+      <ServiceName>SVC.NOTIFICATIONS</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>10000</ServiceIdentifier>
+      <DispatchWaitTime>10000</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>10000</StartFalseWaitTime>
+      <StartTrueWaitTime>30000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="SmtpServer" value="andraserver.andra.local"/>
+        <ParameterCfg key="SmtpPort" value="25"/>
+        <ParameterCfg key="ReportTime" value="15:52"/>
+        <ParameterCfg key="ReportTime" value="2013-02-22 15:43"/>
+        <ParameterCfg key="ReportTime" value="*"/>
+        <!-- * = za każdym sprawdzeniem dispatcher'a (z uwzględnieniem dni)-->
+        <ParameterCfg key="DaysOfWeek" value="123456"/>
+        <!--0 = niedziela-->
+        <ParameterCfg key="ReportRecipientSMTP" value="tsad@andra.com.pl"/>
+        <ParameterCfg key="ReportSenderSMTP" value="tsad@andra.com.pl"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.REPORTSENDER</AssemblyName>
+      <TypeName>AMIGO.SERVICES.REPORTSENDER.ReportSenderDispatcher</TypeName>
+      <ServiceName>SVC.REPORTSENDER</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>10000</ServiceIdentifier>
+      <DispatchWaitTime>10000</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>10000</StartFalseWaitTime>
+      <StartTrueWaitTime>30000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="SmtpServer" value="andraserver.andra.local"/>
+        <ParameterCfg key="SmtpPort" value="25"/>
+        <ParameterCfg key="ReportTime" value="15:52"/>
+        <ParameterCfg key="ReportTime" value="2013-02-22 15:43"/>
+        <ParameterCfg key="ReportTime" value="*"/>
+        <!-- * = za każdym sprawdzeniem dispatcher'a (z uwzględnieniem dni)-->
+        <ParameterCfg key="DaysOfWeek" value="123456"/>
+        <!--0 = niedziela-->
+        <ParameterCfg key="ReportRecipientSMTP" value="tsad@andra.com.pl"/>
+        <ParameterCfg key="ReportSenderSMTP" value="tsad@andra.com.pl"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.TRANSFERTEST</AssemblyName>
+      <TypeName>AMIGO.SERVICES.TRANSFERTEST.TransferTestDispatcher</TypeName>
+      <ServiceName>SVC.TRANSFERTEST</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>9</ServiceIdentifier>
+      <DispatchWaitTime>1000</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>5000</StartFalseWaitTime>
+      <StartTrueWaitTime>5000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="MaxAttemptCounter" value="5"/>
+        <ParameterCfg key="TestBytesNumber" value="100000"/>
+        <!--<ParameterCfg key="TestHourly" value="true"/> deprecated-->
+        <ParameterCfg key="TestNextRandomTimeMinutes" value="120"/>
+        <ParameterCfg key="TestExcludeHour" value="15"/>
+        <!--godzina okna serwisowego np: "22". Parametr mozna dodawać wielokrotnie.-->
+        <ParameterCfg key="TestExcludeHour" value="13"/>
+        <ParameterCfg key="TestExcludeHour" value="14"/>
+        <ParameterCfg key="TestConnectionTimeoutMs" value="10000"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.PING</AssemblyName>
+      <TypeName>AMIGO.SERVICES.PING.PingDispatcher</TypeName>
+      <ServiceName>SVC.PING</ServiceName>
+      <PoolSize>5</PoolSize>
+      <ServiceIdentifier>12</ServiceIdentifier>
+      <DispatchWaitTime>5</DispatchWaitTime>
+      <StartErrorWaitTime>5000</StartErrorWaitTime>
+      <StartFalseWaitTime>2000</StartFalseWaitTime>
+      <StartTrueWaitTime>10</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="ProcessCount" value="1"/>
+        <ParameterCfg key="PerformanceStatistic" value="-1,-1,0,59"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.EMAILSENDER</AssemblyName>
+      <TypeName>AMIGO.SERVICES.EMAILSENDER.EmailSenderDispatcher</TypeName>
+      <ServiceName>SVC.EMAILSENDER</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>20</ServiceIdentifier>
+      <DispatchWaitTime>10000</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>10000</StartFalseWaitTime>
+      <StartTrueWaitTime>30000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="SmtpServer" value="172.25.10.29"/>
+        <ParameterCfg key="SmtpPort" value="25"/>
+        <ParameterCfg key="EmailTime" value="15:52"/>
+        <ParameterCfg key="EmailTime" value="2013-02-22 15:43"/>
+        <ParameterCfg key="EmailTime" value="*"/>
+        <!-- * = za każdym sprawdzeniem dispatcher'a (z uwzględnieniem dni)-->
+        <ParameterCfg key="DaysOfWeek" value="123456"/>
+        <!--0 = niedziela-->
+        <ParameterCfg key ="EmailSendTryLimit" value ="3"/>
+        <ParameterCfg key ="EmailSenderSMTP" value ="ppil@andra.com.pl"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.MONITOR</AssemblyName>
+      <TypeName>AMIGO.SERVICES.MONITOR.MonitorDispatcher</TypeName>
+      <ServiceName>SVC.MONITOR</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>21</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>1000</StartFalseWaitTime>
+      <StartTrueWaitTime>1000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="SmtpServer" value="172.25.10.29"/>
+        <ParameterCfg key="SmtpPort" value="25"/>
+        <ParameterCfg key="ReportTime" value="15:52"/>
+        <ParameterCfg key="ReportTime" value="2013-02-22 15:43"/>
+        <!--<ParameterCfg key="ReportTime" value="*"/>-->
+        <!-- * = za każdym sprawdzeniem dispatcher'a (z uwzględnieniem dni)-->
+        <ParameterCfg key="DaysOfWeek" value="123456"/>
+        <!--0 = niedziela-->
+        <!--<ParameterCfg key ="EmailSendTryLimit" value ="3"/>-->
+        <ParameterCfg key ="EmailSender" value ="tsad@andra.com.pl"/>
+        <ParameterCfg key ="ReportRecipient" value ="tsad@andra.com.pl"/>
+      </Parameters>
+    </DispatcherCfg>
+    <DispatcherCfg>
+      <Enabled>false</Enabled>
+      <AssemblyName>AMIGO.SERVICES.MONITOR</AssemblyName>
+      <TypeName>AMIGO.SERVICES.MONITOR.MonitorDispatcher</TypeName>
+      <ServiceName>SVC.MONITOR</ServiceName>
+      <PoolSize>1</PoolSize>
+      <ServiceIdentifier>22</ServiceIdentifier>
+      <DispatchWaitTime>100</DispatchWaitTime>
+      <StartErrorWaitTime>10000</StartErrorWaitTime>
+      <StartFalseWaitTime>1000</StartFalseWaitTime>
+      <StartTrueWaitTime>1000</StartTrueWaitTime>
+      <Parameters>
+        <ParameterCfg key="SmtpServer" value="172.25.10.29"/>
+        <ParameterCfg key="SmtpPort" value="25"/>
+        <ParameterCfg key="ReportTime" value="15:52"/>
+        <ParameterCfg key="ReportTime" value="2013-02-22 15:43"/>
+        <!--<ParameterCfg key="ReportTime" value="*"/>-->
+        <!-- * = za każdym sprawdzeniem dispatcher'a (z uwzględnieniem dni)-->
+        <ParameterCfg key="DaysOfWeek" value="123456"/>
+        <!--0 = niedziela-->
+        <!--<ParameterCfg key ="EmailSendTryLimit" value ="3"/>-->
+        <ParameterCfg key ="EmailSender" value ="tsad@andra.com.pl"/>
+        <ParameterCfg key ="ReportRecipient" value ="tsad@andra.com.pl"/>
+      </Parameters>
+    </DispatcherCfg>
+  </Dispatchers>
+</ServiceConfiguration>

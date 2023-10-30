@@ -1,0 +1,39 @@
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <targets>
+    <target name="logfile"
+            xsi:type="File"
+            fileName="${basedir}\logs\AMIGO.SERVICES.Log.txt"
+            archiveEvery="Day"
+            maxArchiveFiles="5"
+            layout="${longdate}|${uppercase:${level}}|${logger}|${message}|${exception:innerFormat=Message,Type,ShortType,ToString,Method,StackTrace:maxInnerExceptionLevel=5:innerExceptionSeparator=@:separator=|:format=Message,Type,ShortType,ToString,Method,StackTrace}"/>
+    
+    <target name="transferalogfile"
+            xsi:type="File"
+            fileName="${basedir}\logs\AMIGO.SERVICES.Transfera.txt"
+            archiveEvery="Day"
+            maxArchiveFiles="5"
+            layout="${longdate}|${uppercase:${level}}|${logger}|${message}|${exception:innerFormat=Message,Type,ShortType,ToString,Method,StackTrace:maxInnerExceptionLevel=5:innerExceptionSeparator=@:separator=|:format=Message,Type,ShortType,ToString,Method,StackTrace}"/>
+       
+    <target name="logfileSQL"
+            xsi:type="File"
+            fileName="${basedir}\logs\AMIGO.SERVICES.SQL_Log.txt"
+            archiveEvery="Day"
+            maxArchiveFiles="5"
+            layout="${longdate}|${uppercase:${level}}|${logger}|${message}|${exception:innerFormat=Message,Type,ShortType,ToString,Method,StackTrace:maxInnerExceptionLevel=5:innerExceptionSeparator=@:separator=|:format=Message,Type,ShortType,ToString,Method,StackTrace}"/>
+    <target name="console" xsi:type="ColoredConsole" />
+    
+    <target name="TcpOutlet" xsi:type="NLogViewer" address="tcp4://localhost:4505"/>
+    
+  </targets>
+
+  <rules>
+    <!--<logger name="*" minlevel="Info" writeTo="TcpOutlet" />-->
+    <logger name="AMIGO.SERVICES.XPOTraceListener" minlevel="Error" writeTo="logfileSQL" final="true"/>
+    <logger name="AMIGO.SERVICES.UDP.RcvProvider" minlevel="Info" writeTo="transferalogfile" />
+    <logger name="*" minlevel="Info" writeTo="logfile" />
+    <logger name="*" minlevel="Info" writeTo="console" />
+  </rules>
+    
+</nlog>

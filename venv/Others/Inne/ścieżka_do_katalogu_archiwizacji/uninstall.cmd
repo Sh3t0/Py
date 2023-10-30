@@ -1,0 +1,1 @@
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil /u /ServiceName=AMIGO.SERVICES.UDP AMIGO.SERVICES.exe
